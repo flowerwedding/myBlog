@@ -14,14 +14,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Swagger File (YAML)" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Go File" />
       </list>
     </option>
   </component>
   <component name="GOROOT" path="D:\GO2" />
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
-  </component>
   <component name="ProjectId" id="1fRL2AxqG6VJvg8zPtUJzrHS8fH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,10 +29,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../past/what-unexpected-summer/gobang-test/sqlconn/init.go" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -41,7 +47,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoProjects\src\myBlog\internal\routers\api\v1" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -96,33 +107,57 @@
     <option name="version" value="1" />
   </component>
   <component name="VgoProject">
-    <proxy>direct</proxy>
+    <proxy>GOPROXY=https://goproxy.io</proxy>
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="120" key="#Build_Tags_&amp;_Vendoring" timestamp="1596513489686">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="313" y="120" key="#Build_Tags_&amp;_Vendoring/0.0.1440.920@0.0.1440.920" timestamp="1596513489686" />
-    <state x="501" y="219" key="FileChooserDialogImpl" timestamp="1596516998295">
+    <state x="274" y="159" key="#Custom_Plugin_Repositories" timestamp="1596548744338">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="219" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1596516998295" />
-    <state width="1397" height="296" key="GridCell.Tab.0.bottom" timestamp="1596517343319">
+    <state x="274" y="159" key="#Custom_Plugin_Repositories/0.0.1440.920@0.0.1440.920" timestamp="1596548744338" />
+    <state x="313" y="120" key="#Go_Modules_(vgo)" timestamp="1596525326923">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="296" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1596517343319" />
-    <state width="1397" height="296" key="GridCell.Tab.0.center" timestamp="1596517343318">
+    <state x="313" y="120" key="#Go_Modules_(vgo)/0.0.1440.920@0.0.1440.920" timestamp="1596525326923" />
+    <state x="274" y="159" key="#HTTP_Proxy" timestamp="1596595060682">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="296" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1596517343318" />
-    <state width="1397" height="296" key="GridCell.Tab.0.left" timestamp="1596517343318">
+    <state x="274" y="159" key="#HTTP_Proxy/0.0.1440.920@0.0.1440.920" timestamp="1596595060682" />
+    <state x="468" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596597139879">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="296" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1596517343318" />
-    <state width="1397" height="296" key="GridCell.Tab.0.right" timestamp="1596517343318">
+    <state x="468" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.920@0.0.1440.920" timestamp="1596597139879" />
+    <state x="488" y="328" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog" timestamp="1596597077055">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="296" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1596517343318" />
+    <state x="488" y="328" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.0.1440.920@0.0.1440.920" timestamp="1596597077055" />
+    <state x="234" y="343" key="EditFileWatcherDialog" timestamp="1596548168269">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="234" y="343" key="EditFileWatcherDialog/0.0.1440.920@0.0.1440.920" timestamp="1596548168269" />
+    <state x="501" y="219" key="FileChooserDialogImpl" timestamp="1596618905591">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="501" y="219" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1596618905591" />
+    <state width="1397" height="248" key="GridCell.Tab.0.bottom" timestamp="1596719524658">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="248" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1596719524658" />
+    <state width="1397" height="248" key="GridCell.Tab.0.center" timestamp="1596719524657">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="248" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1596719524657" />
+    <state width="1397" height="248" key="GridCell.Tab.0.left" timestamp="1596719524657">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="248" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1596719524657" />
+    <state width="1397" height="248" key="GridCell.Tab.0.right" timestamp="1596719524658">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="248" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1596719524658" />
     <state width="1397" height="535" key="GridCell.Tab.1.bottom" timestamp="1596459843721">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -139,17 +174,17 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="1397" height="535" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1596459843720" />
-    <state x="130" y="22" key="SettingsEditor" timestamp="1596517057141">
+    <state x="183" y="143" key="SettingsEditor" timestamp="1596618940820">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="130" y="22" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1596517057141" />
+    <state x="183" y="143" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1596618940820" />
     <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1596459836537">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1596459836537" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1596505904685">
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1596628191789">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1596505904685" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1596628191789" />
   </component>
 </project>
