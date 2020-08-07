@@ -13,6 +13,7 @@ import (
 	_ "myBlog/docs"
 	"myBlog/global"
 	"myBlog/internal/middleware"
+	"myBlog/internal/routers/api"
 	v1 "myBlog/internal/routers/api/v1"
 	"net/http"
 )
@@ -27,7 +28,8 @@ func NewRouter() *gin.Engine {
 	tag := v1.NewTag()
 	article := v1.NewArticle()
 
-	r.POST("/upload/file", v1.Upload)
+	r.GET("/auth", api.GetAuth)
+	r.POST("/upload/file", api.Upload)
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 
 	apiv1 := r.Group("/api/v1")

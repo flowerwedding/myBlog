@@ -4,7 +4,7 @@
  * @Author  沈来
  * @Update  2020/8/6 20:15
  **/
-package v1
+package api
 
 import (
 	"github.com/gin-gonic/gin"

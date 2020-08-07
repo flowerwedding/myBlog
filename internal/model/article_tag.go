@@ -37,6 +37,7 @@ func (a ArticleTag) ListByTID(db *gorm.DB) ([]*ArticleTag, error) {
 
 func (a ArticleTag) ListByAIDs(db *gorm.DB, articleIDs []uint32) ([]*ArticleTag, error) {
 	var articleTags []*ArticleTag
+	//参数是切片，所以SQL语句 IN
 	err := db.Where("article_id IN (?) AND is_del = ?", articleIDs, 0).Find(&articleTags).Error
 	if err != nil && err != gorm.ErrRecordNotFound {
 		return nil, err

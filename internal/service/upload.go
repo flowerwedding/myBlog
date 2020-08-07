@@ -23,6 +23,7 @@ func (svc *Service) UploadFile(fileType upload.FileType, file multipart.File, fi
 	fileName := upload.GetFileName(fileHeader.Filename)
 	uploadSavePath := upload.GetSavePath()
 	dst := uploadSavePath + "/" + fileName
+
 	if !upload.CheckContainExt(fileType, fileName) {
 		return nil, errors.New("file suffix is not supported")
 	}

@@ -57,8 +57,7 @@ func (t Tag) List(db *gorm.DB, pageOffSet, pageSize int) ([]*Tag, error) {
 
 func (t Tag) ListByIDs(db *gorm.DB, ids []uint32) ([]*Tag, error) {
 	var tags []*Tag
-	db = db.Where("state = ? AND is_del = ?", t.State, 0)
-	err := db.Where("id IN (?)", ids).Find(&tags).Error
+	err := db.Where("state = ? AND is_del = ?", t.State, 0).Where("id IN (?)", ids).Find(&tags).Error
 	if err != nil && err != gorm.ErrRecordNotFound {
 		return nil, err
 	}
@@ -81,7 +80,10 @@ func (t Tag) Create(db *gorm.DB) error {
 }
 
 func (t Tag) Update(db *gorm.DB, values interface{}) error {
-	return db.Model(&t).Where("id = ? AND is_del = ?", t.ID, 0).Update(values).Error
+	if err := db.Model(t).Updates(values).Where("id = ? AND is_del = ?", t.ID, 0).Error; err != nil {
+		return err
+	}
+	return nil
 }
 
 func (t Tag) Delete(db *gorm.DB) error {

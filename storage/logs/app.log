@@ -56,3 +56,14 @@
 2020/08/06 17:38:18 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.GetArticleList err: sql: Scan error on column index 5, name \"tag_id\": converting NULL to uint32 is unsupported","time":1596706698665062400}
 2020/08/06 18:11:50 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: CreatedBy为必填字段","time":1596708710306553700}
 2020/08/06 21:06:59 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.UploadFile err: file suffix is not supported","time":1596719219234759100}
+2020/08/06 22:25:36 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1596723936430326300}
+2020/08/06 22:26:08 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1596723968763688800}
+2020/08/06 22:26:58 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1596724018430204000}
+2020/08/06 22:27:26 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724046763115300}
+2020/08/06 22:28:06 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724086981901900}
+2020/08/06 22:29:50 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596724190790290600}
+2020/08/06 22:30:08 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596724208843687300}
+2020/08/06 22:30:16 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596724216394603700}
+2020/08/06 22:30:21 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724221441496800}
+2020/08/06 22:37:53 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724673021991600}
+2020/08/06 22:39:10 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724750968583200}
