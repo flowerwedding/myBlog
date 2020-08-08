@@ -7,11 +7,22 @@
 package main
 
 import (
+	"context"
 	"github.com/gin-gonic/gin"
 	"log"
 	"myBlog/global"
 	"myBlog/internal/routers"
 	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
+)
+
+var (
+	port    string
+	runMode string
+	config  string
 )
 
 func init() {
@@ -29,8 +40,12 @@ func init() {
 	}
 	err = setupTracer()
 	if err != nil {
-		log.Fatalf("init.ertupTracer err: %v", err)
+		log.Fatalf("init.setupTracer err: %v", err)
 	}
+	//	err = setupFlag()
+	//	if err != nil {
+	//		log.Fatalf("init.setupFlag err: %v", err)
+	//	}
 }
 
 // @title  博客后台
@@ -48,7 +63,26 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 
-	_ = s.ListenAndServe()
+	//优雅重启和停止
+	go func() {
+		if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			log.Fatalf("s.ListenAndService err: %v", err)
+		}
+	}()
 
+	quit := make(chan os.Signal)
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+	<-quit
+	log.Println("Shuting down server...")
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	if err := s.Shutdown(ctx); err != nil {
+		log.Fatal("Server forced to shutdown:", err)
+	}
+
+	log.Println("Server exiting")
+
+	//_ = s.ListenAndServe()
 	//global.Logger.Infof("%s: go-programming-tour-book/%s","eddycjy","blog-service")
 }

@@ -7,6 +7,7 @@
 package main
 
 import (
+	"flag"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"myBlog/global"
@@ -18,27 +19,28 @@ import (
 )
 
 func setupSetting() error {
-	setting, err := setting.NewSetting()
+	//	s, err := setting.NewSetting(strings.Split(config, ",")...)
+	s, err := setting.NewSetting()
 	if err != nil {
 		return err
 	}
-	err = setting.ReadSection("Server", &global.ServerSetting)
+	err = s.ReadSection("Server", &global.ServerSetting)
 	if err != nil {
 		return err
 	}
-	err = setting.ReadSection("App", &global.AppSetting)
+	err = s.ReadSection("App", &global.AppSetting)
 	if err != nil {
 		return err
 	}
-	err = setting.ReadSection("Database", &global.DatabaseSetting)
+	err = s.ReadSection("Database", &global.DatabaseSetting)
 	if err != nil {
 		return err
 	}
-	err = setting.ReadSection("JWT", &global.JWTSetting)
+	err = s.ReadSection("JWT", &global.JWTSetting)
 	if err != nil {
 		return err
 	}
-	err = setting.ReadSection("Email", &global.EmailSetting)
+	err = s.ReadSection("Email", &global.EmailSetting)
 	if err != nil {
 		return err
 	}
@@ -46,6 +48,13 @@ func setupSetting() error {
 	global.ServerSetting.ReadTimeout *= time.Second
 	global.ServerSetting.WriteTimeout *= time.Second
 	global.JWTSetting.Expire *= time.Hour
+
+	/*	if port != "" {
+			global.ServerSetting.HttpPort = port
+		}
+		if runMode != "" {
+			global.ServerSetting.RunMode = runMode
+		}*/
 
 	return nil
 }
@@ -78,6 +87,15 @@ func setupTracer() error {
 	}
 
 	global.Tracer = jaegerTracer
+
+	return nil
+}
+
+func setupFlag() error {
+	flag.StringVar(&port, "port", "", "启动端口")
+	flag.StringVar(&runMode, "mode", "", "启动模式")
+	flag.StringVar(&config, "config", "", "指定要使用的配置文件路径")
+	flag.Parse()
 
 	return nil
 }

@@ -14,6 +14,14 @@ import (
 	"myBlog/pkg/errcode"
 )
 
+// @Summary  生成JWT
+// @Produce  json
+// @Param  app_key body string true "Key"
+// @Param  app_secret body string true "Secret"
+// @Success  200 {object} model.Auth "成功"
+// @Failure  400 {object} errcode.Error "请求错误"
+// @Failure  500 {object} errcode.Error "内部错误"
+// @Router  /auth [get]
 func GetAuth(c *gin.Context) {
 	param := service.AuthRequest{}
 	response := app.NewResponse(c)
