@@ -20,8 +20,8 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
-func GetJWTSecret() string {
-	return global.JWTSetting.Secret
+func GetJWTSecret() []byte {
+	return []byte(global.JWTSetting.Secret)
 }
 
 func GenerateToken(appKey, appSecret string) (string, error) {
@@ -37,9 +37,9 @@ func GenerateToken(appKey, appSecret string) (string, error) {
 	}
 
 	tokenClaims := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	//这个真的好坑..，SignedString里面参数是[]byte，要查jwt方面查不能从报错查
 	token, err := tokenClaims.SignedString(GetJWTSecret())
-	fmt.Println(" global.JWTSetting : ", global.JWTSetting.Secret, "    ", global.JWTSetting.Issuer)
-	fmt.Println("token : ", token, "err : ", err)
+	fmt.Println(token, err)
 	return token, err
 }
 

@@ -40,7 +40,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../past/what-unexpected-summer/gobang-test/sqlconn/init.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../past/what-unexpected-summer/email.go" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,10 +111,10 @@
     <proxy>GOPROXY=https://goproxy.io</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="313" y="120" key="#Build_Tags_&amp;_Vendoring" timestamp="1596513489686">
+    <state x="313" y="120" key="#Build_Tags_&amp;_Vendoring" timestamp="1596805660176">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="120" key="#Build_Tags_&amp;_Vendoring/0.0.1440.920@0.0.1440.920" timestamp="1596513489686" />
+    <state x="313" y="120" key="#Build_Tags_&amp;_Vendoring/0.0.1440.920@0.0.1440.920" timestamp="1596805660176" />
     <state x="274" y="159" key="#Custom_Plugin_Repositories" timestamp="1596548744338">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -127,6 +127,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="274" y="159" key="#HTTP_Proxy/0.0.1440.920@0.0.1440.920" timestamp="1596595060682" />
+    <state x="313" y="119" key="#Log_Highlighting_(ideolog)" timestamp="1596874012326">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="313" y="119" key="#Log_Highlighting_(ideolog)/0.0.1440.920@0.0.1440.920" timestamp="1596874012326" />
     <state x="468" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596597139879">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -139,26 +143,26 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="234" y="343" key="EditFileWatcherDialog/0.0.1440.920@0.0.1440.920" timestamp="1596548168269" />
-    <state x="501" y="219" key="FileChooserDialogImpl" timestamp="1596618905591">
+    <state x="501" y="219" key="FileChooserDialogImpl" timestamp="1596791779486">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="219" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1596618905591" />
-    <state width="1397" height="248" key="GridCell.Tab.0.bottom" timestamp="1596760462622">
+    <state x="501" y="219" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1596791779486" />
+    <state width="1397" height="763" key="GridCell.Tab.0.bottom" timestamp="1596875479560">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="248" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1596760462622" />
-    <state width="1397" height="248" key="GridCell.Tab.0.center" timestamp="1596760462622">
+    <state width="1397" height="763" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1596875479560" />
+    <state width="1397" height="763" key="GridCell.Tab.0.center" timestamp="1596875479559">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="248" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1596760462622" />
-    <state width="1397" height="248" key="GridCell.Tab.0.left" timestamp="1596760462622">
+    <state width="1397" height="763" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1596875479559" />
+    <state width="1397" height="763" key="GridCell.Tab.0.left" timestamp="1596875479559">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="248" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1596760462622" />
-    <state width="1397" height="248" key="GridCell.Tab.0.right" timestamp="1596760462622">
+    <state width="1397" height="763" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1596875479559" />
+    <state width="1397" height="763" key="GridCell.Tab.0.right" timestamp="1596875479560">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="248" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1596760462622" />
+    <state width="1397" height="763" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1596875479560" />
     <state width="1397" height="535" key="GridCell.Tab.1.bottom" timestamp="1596459843721">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -183,9 +187,9 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1596459836537" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1596628191789">
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1596790459349">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1596628191789" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1596790459349" />
   </component>
 </project>

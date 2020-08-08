@@ -8,6 +8,7 @@ package model
 
 import (
 	"fmt"
+	otgorm "github.com/EDDYCJY/opentracing-gorm"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"myBlog/global"
@@ -52,6 +53,7 @@ func NewDBEngine(databaseSetting *setting.DatabaseSettingS) (*gorm.DB, error) {
 	db.DB().SetMaxIdleConns(databaseSetting.MaxIdleConns)
 	db.DB().SetMaxOpenConns(databaseSetting.MaxOpenConns)
 
+	otgorm.AddGormCallbacks(db)
 	return db, nil
 }
 

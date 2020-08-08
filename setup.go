@@ -13,6 +13,7 @@ import (
 	"myBlog/internal/model"
 	"myBlog/pkg/logger"
 	"myBlog/pkg/setting"
+	"myBlog/pkg/tracer"
 	"time"
 )
 
@@ -34,6 +35,10 @@ func setupSetting() error {
 		return err
 	}
 	err = setting.ReadSection("JWT", &global.JWTSetting)
+	if err != nil {
+		return err
+	}
+	err = setting.ReadSection("Email", &global.EmailSetting)
 	if err != nil {
 		return err
 	}
@@ -62,6 +67,17 @@ func setupLogger() error {
 		MaxAge:    10,
 		LocalTime: true,
 	}, "", log.LstdFlags).WithCaller(2)
+
+	return nil
+}
+
+func setupTracer() error {
+	jaegerTracer, _, err := tracer.NewJaegerTracer("myBlog", "127.0.0.1:6831")
+	if err != nil {
+		return err
+	}
+
+	global.Tracer = jaegerTracer
 
 	return nil
 }

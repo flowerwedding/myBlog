@@ -67,3 +67,13 @@
 2020/08/06 22:30:21 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724221441496800}
 2020/08/06 22:37:53 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724673021991600}
 2020/08/06 22:39:10 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596724750968583200}
+2020/08/07 14:59:23 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596783563203740600}
+2020/08/07 15:15:44 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596784544221338700}
+2020/08/07 15:16:33 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596784593006133600}
+2020/08/07 15:17:08 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596784628483144000}
+2020/08/07 15:17:45 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596784665712691000}
+2020/08/07 15:28:57 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596785337817482400}
+2020/08/07 15:42:11 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"app.GenerateToken err: key is of invalid type","time":1596786131732029900}
+2020/08/07 16:07:00 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596787620557822100}
+2020/08/08 16:01:32 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596873692391224700}
+2020/08/08 16:05:58 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596873958522460600}

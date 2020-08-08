@@ -27,6 +27,10 @@ func init() {
 	if err != nil {
 		log.Fatalf("init.setupLogger err: %v", err)
 	}
+	err = setupTracer()
+	if err != nil {
+		log.Fatalf("init.ertupTracer err: %v", err)
+	}
 }
 
 // @title  博客后台
