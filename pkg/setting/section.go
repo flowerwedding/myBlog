@@ -58,6 +58,7 @@ type EmailSettingS struct {
 	To       []string
 }
 
+//读取存储记录
 func (s *Setting) ReadSection(k string, v interface{}) error {
 	err := s.vp.UnmarshalKey(k, v)
 	if err != nil {
@@ -70,6 +71,7 @@ func (s *Setting) ReadSection(k string, v interface{}) error {
 	return nil
 }
 
+//重新读取配置
 func (s *Setting) ReloadAllSection() error {
 	for k, v := range sections {
 		err := s.ReadSection(k, v)

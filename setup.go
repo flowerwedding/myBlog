@@ -15,12 +15,13 @@ import (
 	"myBlog/pkg/logger"
 	"myBlog/pkg/setting"
 	"myBlog/pkg/tracer"
+	"strings"
 	"time"
 )
 
 func setupSetting() error {
-	//	s, err := setting.NewSetting(strings.Split(config, ",")...)
-	s, err := setting.NewSetting()
+	s, err := setting.NewSetting(strings.Split(config, ",")...)
+	//s, err := setting.NewSetting()
 	if err != nil {
 		return err
 	}
@@ -49,12 +50,12 @@ func setupSetting() error {
 	global.ServerSetting.WriteTimeout *= time.Second
 	global.JWTSetting.Expire *= time.Hour
 
-	/*	if port != "" {
-			global.ServerSetting.HttpPort = port
-		}
-		if runMode != "" {
-			global.ServerSetting.RunMode = runMode
-		}*/
+	if port != "" {
+		global.ServerSetting.HttpPort = port
+	}
+	if runMode != "" {
+		global.ServerSetting.RunMode = runMode
+	}
 
 	return nil
 }

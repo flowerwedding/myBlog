@@ -75,6 +75,19 @@ func CheckMaxSize(t FileType, f multipart.File) bool {
 	return false
 }
 
+//检查文件大小是否超过限制
+func CheckMaxSizes(t FileType, f *multipart.FileHeader) bool {
+	size := int(f.Size)
+	switch t {
+	case TypeImage:
+		if size >= global.AppSetting.UploadImageMaxSize*1024*1024 {
+			return true
+		}
+	}
+
+	return false
+}
+
 //检查文件权限是否足够
 func CheckPermission(dst string) bool {
 	_, err := os.Stat(dst)

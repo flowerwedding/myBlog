@@ -77,3 +77,12 @@
 2020/08/07 16:07:00 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596787620557822100}
 2020/08/08 16:01:32 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596873692391224700}
 2020/08/08 16:05:58 {"callers":["D:/GoProjects/src/myBlog/main.go: 26 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist","time":1596873958522460600}
+2020/08/09 17:36:52 {"callers":["D:/GoProjects/src/myBlog/main.go: 48 main.init.0"],"level":"info","message":"access log: method: GET, status_code: 400, begin_time: 1596965812, end_time: 1596965812","request":"","response":"","span_id":"641a1a82093b94bf","time":1596965812157320900,"trace_id":"641a1a82093b94bf"}
+2020/08/09 17:37:07 {"callers":["D:/GoProjects/src/myBlog/main.go: 48 main.init.0"],"level":"info","message":"access log: method: GET, status_code: 200, begin_time: 1596965827, end_time: 1596965827","request":"","response":"","span_id":"7934481062ebf44e","time":1596965827872971000,"trace_id":"7934481062ebf44e"}
+2020/08/22 16:36:47 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.CreateTag errs: this tag is exist","time":1598085407980998700}
+2020/08/22 17:00:41 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid errs: Content为必填字段,CoverImageUrl为必填字段,Title为必填字段,Desc为必填字段","time":1598086841770633200}
+2020/08/22 17:02:02 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid errs: CoverImageUrl必须是一个有效的URL","time":1598086922905983700}
+2020/08/22 18:42:22 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1598092942440851900}
+2020/08/22 18:43:18 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid errs: ","time":1598092998126870000}
+2020/08/22 19:09:10 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid errs: CoverImageUrl为必填字段,CreatedBy为必填字段,Title为必填字段,Desc为必填字段,Content为必填字段","time":1598094550097818100}
+2020/08/22 19:09:43 {"callers":["D:/GoProjects/src/myBlog/main.go: 42 main.init.0"],"level":"error","message":"app.BindAndValid errs: TagID必须大于或等于1","time":1598094583837783200}

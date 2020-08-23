@@ -75,6 +75,16 @@ func (t Tag) Get(db *gorm.DB) (Tag, error) {
 	return tag, nil
 }
 
+func (t Tag) GetByName(db *gorm.DB) (Tag, error) {
+	var tag Tag
+	err := db.Where("name = ? AND is_del = ? AND state = ?", t.Name, 0, t.State).First(&tag).Error
+	if err != nil && err != gorm.ErrRecordNotFound {
+		return tag, err
+	}
+
+	return tag, nil
+}
+
 func (t Tag) Create(db *gorm.DB) error {
 	return db.Create(&t).Error
 }

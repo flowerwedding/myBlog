@@ -32,7 +32,10 @@ func (svc *Service) UploadFile(fileType upload.FileType, file multipart.File, fi
 			return nil, errors.New("fail to create save directory")
 		}
 	}
-	if upload.CheckMaxSize(fileType, file) {
+	if file != nil && upload.CheckMaxSize(fileType, file) {
+		return nil, errors.New("exceeded maximum file limit")
+	}
+	if file == nil && upload.CheckMaxSizes(fileType, fileHeader) {
 		return nil, errors.New("exceeded maximum file limit")
 	}
 	if upload.CheckPermission(uploadSavePath) {

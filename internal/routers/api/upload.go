@@ -49,3 +49,45 @@ func Upload(c *gin.Context) {
 		"file_access_url": fileInfo.AccessUrl,
 	})
 }
+
+// @Summary  多文件上传
+// @Produce  json
+// @Param  file body string true "文件"
+// @Param  type body string true "类型"
+// @Success  200 {object} app.Response "成功"
+// @Failure  400 {object} errcode.Error "请求错误"
+// @Failure  500 {object} errcode.Error "内部错误"
+// @Router  /upload/file [post]
+func Uploads(c *gin.Context) {
+	response := app.NewResponse(c)
+	form, err := c.MultipartForm()
+
+	fileType := convert.StrTo(c.PostForm("type")).MustInt()
+	if err != nil {
+		response.ToErrorResponse(errcode.InvalidParams.WithDetails(err.Error()))
+		return
+	}
+	if form == nil || fileType <= 0 {
+		response.ToErrorResponse(errcode.InvalidParams)
+		return
+	}
+
+	files := form.File["file"]
+
+	var AccessUrls []string
+	for _, file := range files {
+		svc := service.New(c.Request.Context())
+		fileInfo, err := svc.UploadFile(upload.FileType(fileType), nil, file)
+		if err != nil {
+			global.Logger.Errorf("svc.UploadFile err: %v", err)
+			response.ToErrorResponse(errcode.ERROR_UPLOAD_FILE_FAIL.WithDetails(err.Error()))
+			return
+		}
+
+		AccessUrls = append(AccessUrls, fileInfo.AccessUrl)
+	}
+
+	response.ToResponse(gin.H{
+		"file_access_url": AccessUrls,
+	})
+}

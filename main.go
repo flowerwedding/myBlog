@@ -25,8 +25,13 @@ var (
 	config  string
 )
 
+//go run main.go -port=8001 -mode=release -config=configs/  终端执行时把setup.go的函数复制到main.go下
 func init() {
-	err := setupSetting()
+	err := setupFlag()
+	if err != nil {
+		log.Fatalf("init.setupFlag err: %v", err)
+	}
+	err = setupSetting()
 	if err != nil {
 		log.Fatalf("init.setupSetting err: %v", err)
 	}
@@ -42,10 +47,6 @@ func init() {
 	if err != nil {
 		log.Fatalf("init.setupTracer err: %v", err)
 	}
-	//	err = setupFlag()
-	//	if err != nil {
-	//		log.Fatalf("init.setupFlag err: %v", err)
-	//	}
 }
 
 // @title  博客后台
@@ -73,7 +74,7 @@ func main() {
 	quit := make(chan os.Signal)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
 	<-quit
-	log.Println("Shuting down server...")
+	log.Println("Shutting down server...")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()

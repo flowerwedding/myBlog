@@ -10,6 +10,8 @@ import (
 	"myBlog/internal/dao"
 	"myBlog/internal/model"
 	"myBlog/pkg/app"
+	"strconv"
+	"strings"
 )
 
 type ArticleRequest struct {
@@ -23,7 +25,7 @@ type ArticleListRequest struct {
 }
 
 type CreateArticleRequest struct {
-	TagID         uint32 `form:"tag_id" binding:"required,gte=1"`
+	TagID         string `form:"tag_id" binding:"required,gte=1"`
 	Title         string `form:"title" binding:"required,min=2,max=100"`
 	Desc          string `form:"desc" binding:"required,min=2,max=255"`
 	Content       string `form:"content" binding:"required,min=2,max=4294967295"`
@@ -34,7 +36,7 @@ type CreateArticleRequest struct {
 
 type UpdateArticleRequest struct {
 	ID            uint32 `form:"id" binding:"required,gte=1"`
-	TagID         uint32 `form:"tag_id" binding:"required,gte=1"`
+	TagID         string `form:"tag_id" binding:"required,gte=1"`
 	Title         string `form:"title" binding:"min=2,max=100"`
 	Desc          string `form:"desc" binding:"min=2,max=255"`
 	Content       string `form:"content" binding:"min=2,max=4294967295"`
@@ -123,9 +125,13 @@ func (svc *Service) CreateArticle(param *CreateArticleRequest) error {
 		return err
 	}
 
-	err = svc.dao.CreateArticleTag(article.ID, param.TagID, param.CreatedBy)
-	if err != nil {
-		return err
+	tags := strings.Fields(param.TagID)
+	for _, v := range tags {
+		j, _ := strconv.ParseInt(v, 10, 32)
+		err = svc.dao.CreateArticleTag(article.ID, uint32(j), param.CreatedBy)
+		if err != nil {
+			return err
+		}
 	}
 
 	return nil
@@ -145,9 +151,18 @@ func (svc *Service) UpdateArticle(param *UpdateArticleRequest) error {
 		return err
 	}
 
-	err = svc.dao.UpdateArticleTag(param.ID, param.TagID, param.ModifiedBy)
+	err = svc.DeleteArticle(&DeleteArticleRequest{ID: param.ID})
 	if err != nil {
-		return err
+		return nil
+	}
+
+	tags := strings.Fields(param.TagID)
+	for _, v := range tags {
+		j, _ := strconv.ParseInt(v, 10, 32)
+		err = svc.dao.CreateArticleTag(param.ID, uint32(j), param.ModifiedBy)
+		if err != nil {
+			return err
+		}
 	}
 
 	return nil

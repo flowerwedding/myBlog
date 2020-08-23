@@ -49,6 +49,7 @@ func NewRouter() *gin.Engine {
 
 	r.GET("/auth", api.GetAuth)
 	r.POST("/upload/file", api.Upload)
+	r.POST("/upload/files", api.Uploads)
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 
 	apiv1 := r.Group("/api/v1")

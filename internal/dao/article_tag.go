@@ -23,7 +23,7 @@ func (d *Dao) GetArticleTagListByAIDs(articleIDs []uint32) ([]*model.ArticleTag,
 	return articleTag.ListByAIDs(d.engine, articleIDs)
 }
 
-func (d *Dao) CreateArticleTag(articleID, tagID uint32, createdBy string) error {
+func (d *Dao) CreateArticleTag(articleID uint32, tagID uint32, createdBy string) error {
 	articleTag := model.ArticleTag{
 		Model: &model.Model{
 			CreatedBy: createdBy,
@@ -31,6 +31,7 @@ func (d *Dao) CreateArticleTag(articleID, tagID uint32, createdBy string) error 
 		ArticleID: articleID,
 		TagID:     tagID,
 	}
+
 	return articleTag.Create(d.engine)
 }
 

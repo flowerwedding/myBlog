@@ -7,6 +7,7 @@
 package dao
 
 import (
+	"errors"
 	"myBlog/internal/model"
 	"myBlog/pkg/app"
 )
@@ -37,6 +38,11 @@ func (d *Dao) CreateTag(name string, state uint8, createdBy string) error {
 		Name:  name,
 		State: state,
 		Model: &model.Model{CreatedBy: createdBy},
+	}
+
+	tt, _ := tag.GetByName(d.engine)
+	if tt.ID != 0 {
+		return errors.New("this tag is exist")
 	}
 
 	return tag.Create(d.engine)
