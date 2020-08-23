@@ -96,4 +96,4 @@ go run main.go
 
 ## 效果图
 
-![1598147827957](C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\1598147827957.png)
+![1598147827957](C:\Users\HUAWEI\myBlog\view\img\main.go)
