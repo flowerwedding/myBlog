@@ -96,4 +96,4 @@ go run main.go
 
 ## 效果图
 
-![1598147827957](C:\Users\HUAWEI\myBlog\view\img\main.go)
+![1598147827957](.\view\img\main.go)
