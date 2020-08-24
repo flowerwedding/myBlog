@@ -103,4 +103,4 @@ go run main.go
 
 ## 效果图
 
-![1598147827957](C:\Users\HUAWEI\Desktop\1598147827957.png)
+![1598147827957](https://github.com/flowerwedding/myBlog/blob/master/view/img/1598147827957.png)
