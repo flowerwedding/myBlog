@@ -15,8 +15,8 @@
       <list>
         <option value="Swagger File (YAML)" />
         <option value="JavaScript File" />
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -40,7 +40,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myUtil" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wblog" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,11 +51,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoProjects\src\myBlog\internal\service" />
       <recent name="D:\GoProjects\src\myBlog\view\img" />
       <recent name="D:\GoProjects\src\myBlog\view" />
       <recent name="D:\GoProjects\src\myBlog" />
       <recent name="D:\GoProjects\src\myBlog\internal\routers\api" />
-      <recent name="D:\GoProjects\src\myBlog\internal\routers\api\v1" />
     </key>
   </component>
   <component name="RunManager">
@@ -154,26 +154,26 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="234" y="343" key="EditFileWatcherDialog/0.0.1440.920@0.0.1440.920" timestamp="1596548168269" />
-    <state x="501" y="219" key="FileChooserDialogImpl" timestamp="1597998168906">
+    <state x="501" y="219" key="FileChooserDialogImpl" timestamp="1598232461380">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="501" y="219" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1597998168906" />
-    <state width="1397" height="250" key="GridCell.Tab.0.bottom" timestamp="1598096412398">
+    <state x="501" y="219" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1598232461380" />
+    <state width="1397" height="189" key="GridCell.Tab.0.bottom" timestamp="1598237845931">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="250" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1598096412398" />
-    <state width="1397" height="250" key="GridCell.Tab.0.center" timestamp="1598096412397">
+    <state width="1397" height="189" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1598237845931" />
+    <state width="1397" height="189" key="GridCell.Tab.0.center" timestamp="1598237845930">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="250" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1598096412397" />
-    <state width="1397" height="250" key="GridCell.Tab.0.left" timestamp="1598096412397">
+    <state width="1397" height="189" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1598237845930" />
+    <state width="1397" height="189" key="GridCell.Tab.0.left" timestamp="1598237845930">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="250" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1598096412397" />
-    <state width="1397" height="250" key="GridCell.Tab.0.right" timestamp="1598096412397">
+    <state width="1397" height="189" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1598237845930" />
+    <state width="1397" height="189" key="GridCell.Tab.0.right" timestamp="1598237845930">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="250" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1598096412397" />
+    <state width="1397" height="189" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1598237845930" />
     <state width="1397" height="535" key="GridCell.Tab.1.bottom" timestamp="1596459843721">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -198,6 +198,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1596459836537" />
+    <state x="93" y="93" width="1255" height="735" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598184607441">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="93" y="93" width="1255" height="735" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.920@0.0.1440.920" timestamp="1598184607441" />
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1598085718862">
       <screen x="0" y="0" width="1440" height="920" />
     </state>

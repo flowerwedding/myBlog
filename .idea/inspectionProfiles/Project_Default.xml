@@ -16,6 +16,7 @@
         <method importPath="database/sql" receiver="*Rows" name="Close" />
         <method importPath="mime/multipart" receiver="File" name="Close" />
         <method importPath="os" receiver="*File" name="Close" />
+        <method importPath="io" receiver="ReadCloser" name="Close" />
       </methods>
     </inspection_tool>
   </profile>

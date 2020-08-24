@@ -40,3 +40,10 @@ Email:
   From: 2804991212@qq.com
   To:
     - 2965502421@qq.com
+Qiniu:
+  Bucket:
+  AccessKey:
+  SecretKey:
+  FileServer:
+Rss:
+  Domain:

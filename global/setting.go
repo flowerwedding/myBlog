@@ -17,6 +17,8 @@ var (
 	DatabaseSetting *setting.DatabaseSettingS
 	JWTSetting      *setting.JWTSettingS
 	EmailSetting    *setting.EmailSettingS
+	QiniuSetting    *setting.QiniuSettingS
+	RssSetting      *setting.RssSettingS
 
 	Logger *logger.Logger
 )

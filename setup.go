@@ -45,6 +45,14 @@ func setupSetting() error {
 	if err != nil {
 		return err
 	}
+	err = s.ReadSection("Email", &global.QiniuSetting)
+	if err != nil {
+		return err
+	}
+	err = s.ReadSection("Email", &global.RssSetting)
+	if err != nil {
+		return err
+	}
 
 	global.ServerSetting.ReadTimeout *= time.Second
 	global.ServerSetting.WriteTimeout *= time.Second

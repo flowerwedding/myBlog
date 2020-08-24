@@ -47,6 +47,10 @@ func NewRouter() *gin.Engine {
 	tag := v1.NewTag()
 	article := v1.NewArticle()
 
+	r.GET("/getCaptcha", api.GetCaptcha) //图形验证码
+	r.GET("/verifyCaptcha", api.VerifyCaptcha)
+	r.GET("/show/:source", api.GetCaptchaPng)
+
 	r.GET("/auth", api.GetAuth)
 	r.POST("/upload/file", api.Upload)
 	r.POST("/upload/files", api.Uploads)
@@ -67,6 +71,8 @@ func NewRouter() *gin.Engine {
 		apiv1.PATCH("/articles/:id/state", article.Update)
 		apiv1.GET("/articles/:id", article.Get)
 		apiv1.GET("/articles", article.List)
+
+		apiv1.GET("/rss", api.RssGet) //
 	}
 
 	return r

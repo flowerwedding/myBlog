@@ -58,6 +58,17 @@ type EmailSettingS struct {
 	To       []string
 }
 
+type QiniuSettingS struct {
+	Bucket     string
+	AccessKey  string
+	SecretKey  string
+	FileServer string
+}
+
+type RssSettingS struct {
+	Domain string
+}
+
 //读取存储记录
 func (s *Setting) ReadSection(k string, v interface{}) error {
 	err := s.vp.UnmarshalKey(k, v)

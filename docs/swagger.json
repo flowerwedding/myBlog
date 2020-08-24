@@ -17,11 +17,11 @@
                 "summary": "获取多篇文章",
                 "parameters": [
                     {
-                        "maxLength": 100,
-                        "type": "string",
-                        "description": "文章名称",
-                        "name": "name",
-                        "in": "query"
+                        "type": "integer",
+                        "description": "标签ID",
+                        "name": "tag_id",
+                        "in": "query",
+                        "required": true
                     },
                     {
                         "enum": [
@@ -75,45 +75,72 @@
                 "summary": "新增文章",
                 "parameters": [
                     {
-                        "maxLength": 100,
-                        "minLength": 3,
-                        "description": "文章名称",
-                        "name": "name",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "type": "string",
+                        "description": "标签id",
+                        "name": "tag_id",
+                        "in": "query",
+                        "required": true
                     },
                     {
                         "enum": [
                             0,
                             1
                         ],
+                        "type": "integer",
                         "default": 1,
                         "description": "状态",
                         "name": "state",
-                        "in": "body",
-                        "schema": {
-                            "type": "integer"
-                        }
+                        "in": "query"
                     },
                     {
                         "maxLength": 100,
-                        "minLength": 3,
+                        "minLength": 2,
+                        "type": "string",
                         "description": "创建者",
                         "name": "created_by",
-                        "in": "body",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "maxLength": 100,
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "标题",
+                        "name": "title",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "maxLength": 255,
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "详情",
+                        "name": "desc",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "maxLength": 4294967295,
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "内容",
+                        "name": "content",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "封面URL",
+                        "name": "cover_image_url",
+                        "in": "query",
+                        "required": true
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/model.Tag"
+                            "$ref": "#/definitions/model.Article"
                         }
                     },
                     "400": {
@@ -146,13 +173,6 @@
                         "required": true
                     },
                     {
-                        "maxLength": 100,
-                        "type": "string",
-                        "description": "文章名称",
-                        "name": "name",
-                        "in": "query"
-                    },
-                    {
                         "enum": [
                             0,
                             1
@@ -161,18 +181,6 @@
                         "default": 1,
                         "description": "状态",
                         "name": "state",
-                        "in": "query"
-                    },
-                    {
-                        "type": "integer",
-                        "description": "页码",
-                        "name": "page",
-                        "in": "query"
-                    },
-                    {
-                        "type": "integer",
-                        "description": "每页数量",
-                        "name": "page_size",
                         "in": "query"
                     }
                 ],
@@ -204,55 +212,76 @@
                 "summary": "更新文章",
                 "parameters": [
                     {
-                        "type": "integer",
-                        "description": "文章ID",
+                        "type": "string",
+                        "description": "文章id",
                         "name": "id",
-                        "in": "path",
+                        "in": "query",
                         "required": true
                     },
                     {
-                        "maxLength": 100,
-                        "minLength": 3,
-                        "description": "文章名称",
-                        "name": "name",
-                        "in": "body",
-                        "schema": {
-                            "type": "string"
-                        }
+                        "type": "string",
+                        "description": "标签id",
+                        "name": "tag_id",
+                        "in": "query",
+                        "required": true
                     },
                     {
                         "enum": [
                             0,
                             1
                         ],
+                        "type": "integer",
                         "default": 1,
                         "description": "状态",
                         "name": "state",
-                        "in": "body",
-                        "schema": {
-                            "type": "integer"
-                        }
+                        "in": "query"
                     },
                     {
                         "maxLength": 100,
-                        "minLength": 3,
-                        "description": "修改者",
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "创建者",
                         "name": "modified_by",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "maxLength": 100,
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "标题",
+                        "name": "title",
+                        "in": "query"
+                    },
+                    {
+                        "maxLength": 255,
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "详情",
+                        "name": "desc",
+                        "in": "query"
+                    },
+                    {
+                        "maxLength": 4294967295,
+                        "minLength": 2,
+                        "type": "string",
+                        "description": "内容",
+                        "name": "content",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "封面URL",
+                        "name": "cover_image_url",
+                        "in": "query",
+                        "required": true
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/model.Tag"
-                            }
+                            "$ref": "#/definitions/model.Article"
                         }
                     },
                     "400": {
@@ -279,7 +308,7 @@
                         "type": "integer",
                         "description": "文章ID",
                         "name": "id",
-                        "in": "path",
+                        "in": "query",
                         "required": true
                     }
                 ],
@@ -288,6 +317,66 @@
                         "description": "成功",
                         "schema": {
                             "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "请求错误",
+                        "schema": {
+                            "$ref": "#/definitions/errcode.Error"
+                        }
+                    },
+                    "500": {
+                        "description": "内部错误",
+                        "schema": {
+                            "$ref": "#/definitions/errcode.Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/rss": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "文章订阅",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "标签ID",
+                        "name": "tag_id",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "enum": [
+                            0,
+                            1
+                        ],
+                        "type": "integer",
+                        "default": 1,
+                        "description": "状态",
+                        "name": "state",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "页码",
+                        "name": "page",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "每页数量",
+                        "name": "page_size",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/string"
                         }
                     },
                     "400": {
@@ -541,11 +630,11 @@
                 "produces": [
                     "application/json"
                 ],
-                "summary": "生成JWT",
+                "summary": "验证图形验证码",
                 "parameters": [
                     {
-                        "description": "Key",
-                        "name": "app_key",
+                        "description": "验证码ID",
+                        "name": "captchaId",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -553,8 +642,8 @@
                         }
                     },
                     {
-                        "description": "Secret",
-                        "name": "app_secret",
+                        "description": "验证码内容",
+                        "name": "value",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -566,7 +655,63 @@
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/model.Auth"
+                            "$ref": "#/definitions/string"
+                        }
+                    },
+                    "400": {
+                        "description": "请求错误",
+                        "schema": {
+                            "$ref": "#/definitions/errcode.Error"
+                        }
+                    },
+                    "500": {
+                        "description": "内部错误",
+                        "schema": {
+                            "$ref": "#/definitions/errcode.Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/getCaptcha": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "生成图形验证码",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/string"
+                        }
+                    },
+                    "400": {
+                        "description": "请求错误",
+                        "schema": {
+                            "$ref": "#/definitions/errcode.Error"
+                        }
+                    },
+                    "500": {
+                        "description": "内部错误",
+                        "schema": {
+                            "$ref": "#/definitions/errcode.Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/show/:source": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "查看图形验证码",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/string"
                         }
                     },
                     "400": {
@@ -589,7 +734,7 @@
                 "produces": [
                     "application/json"
                 ],
-                "summary": "文件上传",
+                "summary": "多文件上传",
                 "parameters": [
                     {
                         "description": "文件",
